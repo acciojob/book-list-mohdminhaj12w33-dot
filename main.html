@@ -1,16 +1,93 @@
-<!DOCTYPE html>
 
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>MyBookList</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      display: flex;
+      gap: 10px;
+    }
+
+    .form-group input {
+      flex: 1;
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    #submit {
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    table {
+      width: 80%;
+      margin: 0 auto;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    .delete {
+      padding: 4px 8px;
+      background: #e74c3c;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+
+    .delete:hover {
+      background: #c0392b;
+    }
+  </style>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
 
+  <h1>MyBookList</h1>
+
+  <div class="form-group">
+    <input type="text" id="title" placeholder="Book Title">
+    <input type="text" id="author" placeholder="Author">
+    <input type="text" id="isbn" placeholder="ISBN#">
+    <button id="submit">Submit</button>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Author</th>
+        <th>ISBN#</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="book-list">
+      <!-- New rows will be added here -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
